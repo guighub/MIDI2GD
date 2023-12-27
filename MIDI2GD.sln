@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDI2GD", "MIDI2GD\MIDI2GD.csproj", "{4DED937F-7233-4AE3-96BD-2A7BBA80C3FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DED937F-7233-4AE3-96BD-2A7BBA80C3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DED937F-7233-4AE3-96BD-2A7BBA80C3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DED937F-7233-4AE3-96BD-2A7BBA80C3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DED937F-7233-4AE3-96BD-2A7BBA80C3FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5F60CB5-747C-4DD7-9D76-A72E830900C2}
+	EndGlobalSection
+EndGlobal

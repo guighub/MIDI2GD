@@ -1,0 +1,16 @@
+# This file maps each MIDI channel to a different SFX ID, downloaded SFX will be located in "C:/Users/user/AppData/Local/GeometryDash/"
+
+# Synth Lead
+14219
+
+# Kick
+14186
+
+# Cymbal
+14181
+
+# Bass
+3937
+
+# Cymbal Crash
+3836
