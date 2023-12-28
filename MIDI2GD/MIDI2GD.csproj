@@ -10,6 +10,12 @@
     <Authors>Jaiden Ougland</Authors>
     <Company>guiguig</Company>
     <ApplicationIcon>Resources\icon128.ico</ApplicationIcon>
+    <Description>MIDI importer for Geometry Dash!</Description>
+    <Copyright>guiguig</Copyright>
+    <PackageProjectUrl>https://github.com/guighub/MIDI2GD</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/guighub/MIDI2GD</RepositoryUrl>
+    <PackageTags>midi; geometry-dash</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +30,13 @@
     <EmbeddedResource Include="InstrumentMappings.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
