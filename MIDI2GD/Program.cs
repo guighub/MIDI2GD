@@ -4,6 +4,7 @@ using GeometryDashAPI.Levels;
 using GeometryDashAPI.Levels.GameObjects.Triggers;
 using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Interaction;
+using InstrumentMappings;
 
 // Default settings
 string configName = @"InstrumentMappings.txt";
@@ -16,7 +17,7 @@ string midiPath;
 
 int[] LoadInstrumentMappings() // Load SFX IDs from text file
 {
-    if (File.Exists(configName))
+    try
     {
         // Read existing mappings
         string[] fileData = File.ReadAllLines(configName);
@@ -35,21 +36,13 @@ int[] LoadInstrumentMappings() // Load SFX IDs from text file
         }
 
         return sfxIDs.ToArray();
-    } else
+    } catch
     {
-        // No mappings file located, so load the default mappings from resources
-        var assembly = Assembly.GetExecutingAssembly();
-        string resourceName = assembly.GetManifestResourceNames()
-        .Single(str => str.EndsWith(configName));
+        // No mappings file located, so load the default mappings
+        StreamWriter streamWriter = File.CreateText(configName);
+        streamWriter.Write(InstrumentMappings.InstrumentMappings.newInstrumentMappings);
+        streamWriter.Close();
 
-        using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-        using (StreamReader reader = new StreamReader(stream))
-        {
-            string result = reader.ReadToEnd();
-            StreamWriter newMappingsFile = File.CreateText(configName);
-            newMappingsFile.Write(result);
-            newMappingsFile.Close();
-        }
         return LoadInstrumentMappings();
     }
 }
@@ -58,11 +51,11 @@ MidiFile AskForMIDI() // Get MIDI file path from user
 {
     midiPath = Console.ReadLine().Replace("\"", string.Empty);
     MidiFile midiFile = new MidiFile();
-    if (File.Exists(midiPath))
+    try
     {
         midiFile = MidiFile.Read(midiPath);
     }
-    else
+    catch
     {
         Console.WriteLine("Path does not exist, try again");
         AskForMIDI();
