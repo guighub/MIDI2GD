@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Resources;
 using GeometryDashAPI.Data;
 using GeometryDashAPI.Levels;
 using GeometryDashAPI.Levels.GameObjects.Triggers;
