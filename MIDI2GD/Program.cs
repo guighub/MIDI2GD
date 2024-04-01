@@ -1,10 +1,8 @@
-﻿using System.Reflection;
-using GeometryDashAPI.Data;
+﻿using GeometryDashAPI.Data;
 using GeometryDashAPI.Levels;
 using GeometryDashAPI.Levels.GameObjects.Triggers;
 using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Interaction;
-using InstrumentMappings;
 
 // Default settings
 string configName = @"InstrumentMappings.txt";
