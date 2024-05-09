@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GeometryDashAPI" Version="0.2.27" />
+    <PackageReference Include="GeometryDashAPI" Version="0.2.28" />
     <PackageReference Include="Melanchall.DryWetMidi" Version="7.0.2" />
   </ItemGroup>
 
